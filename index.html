@@ -1,0 +1,158 @@
+<!DOCTYPE HTML >
+<!-- Bachmair Boys -->
+<html>
+	<head>
+		<title> </title>
+		<style>
+			body{
+				text-align:center;
+			}
+			table{
+				border-style: solid;
+				border-color: black;
+				padding: 10px;
+				padding: 10px;
+				margin: 10px;
+			}
+			.outer{
+				border-style: solid;
+				border-color:red;
+				padding: 10px;
+				border-radius: 70px;
+				margin: 0px;
+			}
+			.color{
+				border-style: solid;
+				border-color:black;
+				margin: 5px;
+			}
+			tr{
+				padding: 5px;
+			}
+			.blue{
+				background-color: blue;
+			}
+			.white{
+				background-color: white;
+			}
+			.red{
+				background-color: red;
+			}
+			.yellow{
+				background-color: yellow;
+			}
+			.black{
+				background-color: black;
+			}
+			.green{
+				background-color: green;
+			}
+		</style>
+		<script>
+			function initialize(){
+				//document.getElementById("main").style.display = "none";
+				document.getElementById("color").style.display = "none";
+				
+			}
+			
+		</script>
+	</head>
+	
+	<body onload = "initialize()">
+		<div>
+			<h1>Mastermind (in space!) </h1>
+			<button>Import Mastermind Puzzle </button>
+			<div> </div>
+			<table id = "main">
+			
+					<tr>					
+						<td class = "outer">
+							 1
+							 <table>
+								<tr>
+									<td class = "color" id  = "blue">
+									</td>
+									<td class  = "color" id = "red">
+									</td>
+									<td class  = "color" id = "yellow" >
+									</td>
+								</tr>
+								<tr>
+									<td class  = "color" class = "black">
+									</td>
+									<td class  = "color" class = "white" >
+									</td>
+									<td class  = "color" class = "green" >
+									</td>
+								</tr>
+							 </table>
+						</td>
+						<td class = "outer"> 2
+							  <table>
+								<tr>
+									<td class = "color" class  = "blue">
+									</td>
+									<td class  = "color" class = "red">
+									</td>
+									<td class  = "color" class = "yellow" >
+									</td>
+								</tr>
+								<tr>
+									<td class  = "color" class = "black">
+									</td>
+									<td class  = "color" class = "white" >
+									</td>
+									<td class  = "color" class = "green" >
+									</td>
+								</tr>
+							 </table>
+						</td>
+						<td class = "outer"> 3
+							 <table>
+								<tr>
+									<td class = "color" class  = "blue">
+									</td>
+									<td class  = "color" class = "red">
+									</td>
+									<td class  = "color" class = "yellow" >
+									</td>
+								</tr>
+								<tr>
+									<td class  = "color" class = "black">
+									</td>
+									<td class  = "color" class = "white" >
+									</td>
+									<td class  = "color" class = "green" >
+									</td>
+								</tr>
+							 </table>
+						</td>
+						<td class = "outer"> 4
+							 <table>
+								<tr>
+									<td class = "color" class  = "blue">
+									</td>
+									<td class  = "color" class = "red">
+									</td>
+									<td class  = "color" class = "yellow" >
+									</td>
+								</tr>
+								<tr>
+									<td class  = "color" class = "black">
+									</td>
+									<td class  = "color" class = "white" >
+									</td>
+									<td class  = "color" class = "green" >
+									</td>
+								</tr>
+							 </table>
+						</td>
+					</tr>
+					
+			</table>
+			<button> Add row </button>
+
+	</body>
+	
+</html>
+
