@@ -1,0 +1,53 @@
+body {
+	text-align:center;
+}
+
+table {
+	border-style: solid;
+	border-color: black;
+	padding: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.outer {
+	border-style: solid;
+	border-color:red;
+	padding: 10px;
+	border-radius: 70px;
+	margin: 0px;
+}
+
+.color {
+	border-style: solid;
+	border-color:black;
+	margin: 5px;
+}
+
+tr {
+	padding: 5px;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.white {
+	background-color: white;
+}
+
+.red {
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.black {
+	background-color: black;
+}
+
+.green {
+	background-color: green;
+}
