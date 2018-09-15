@@ -8,6 +8,8 @@ guess4 = Guess([c.W, c.R, c.Bk, c.R],0,1)
 guess5 = Guess([c.R, c.R, c.G, c.G],1,1)
 guesses = [guess1,guess2,guess3,guess4,guess5]
 explanations = []
+solutions = []
+solution = []
 colors = [c.Y,c.G,c.R,c.Bk,c.Bu,c.W]
 code = [[c.Y,c.G,c.R,c.Bk,c.Bu,c.W],[c.Y,c.G,c.R,c.Bk,c.Bu,c.W],[c.Y,c.G,c.R,c.Bk,c.Bu,c.W],[c.Y,c.G,c.R,c.Bk,c.Bu,c.W],]
 #code[1][2] = c.NONE  
@@ -54,8 +56,9 @@ def from_num_dots_and_colors():
             num_color = count_instances_of_color_in_guess(color, a_guess)
             if num_color >= 1:
                 colors_in_seq.append(color)
-        if a_guess.num_blacks + a_guess.num_whites > len(colors_in_seq):
-            pass
+        if a_guess.num_blacks + a_guess.num_whites >= len(colors_in_seq):
+            for color_in_seq in colors_in_seq:
+                must_have_a_color(color_in_seq) 
         if a_guess.num_blacks + a_guess.num_whites == 1 and len(colors_in_seq) == 2:
             pass
            
@@ -97,12 +100,22 @@ def is_solved(position, solvedColor):
 #         print(p)
 
 def main():
-    print(check_possibilities())
-    print(6*5*6*6)
-    print(count_instances_of_color_in_guess(c.Bk, guess1.sequence))
-    must_have_a_color(c.Bk)
-    for a_guess in guesses:
-        print(a_guess.sequence)
+#     print(check_possibilities())
+#     print(6*5*6*6)
+#     print(count_instances_of_color_in_guess(c.Bk, guess1.sequence))
+#     must_have_a_color(c.Bk)
+#     for a_guess in guesses:
+#         print(a_guess.sequence)
+    apply_rule1()
+    while check_possibilities() > 5:
+        from_num_dots_and_colors()
+        if check_possibilities <= 5:
+            break
+        else:
+            guess_branch():
+    #for g in code    
+        
+    
         
 if __name__ == '__main__':
     main()                
