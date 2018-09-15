@@ -12,7 +12,7 @@
 	<body onload = "initialize()">
 		<div id = "wrapper">
 			<h1>Solution to Tucker's Weekly Puzzle</h1>
-			<p>[insert description here]</p>
+			<p>Weekly emails sent to students containing the mastermind puzzle are scraped and computed to solve the problem. Puzzle and solution are provided below.</p>
 			<br />
 			<table id = "container">
 				<tr>
@@ -24,18 +24,36 @@
 					<th>White Pegs</th>
 				</tr>
 			</table>
+			<br />
+			<div id = "solutions"></div>
 			<a href="{{ url_for('index') }}">Return to main page</a> 
 		</div>
-	</body>
-
-	<script type="text/javascript">
+		
+		<script type="text/javascript">
+		//alert(data.num_blacks.length);
 		$(function(){
-			$.getJSON($SCRIPT_ROOT + '/get_guesses', (data) => {
-				for(int i = 0; i < data.num_blacks.length ; i++){
-					row = $('<tr></tr>');
-					entry1 = $('<td>')
+			$.getJSON('/get_guesses', (data) => {
+				for (var i = 0; i < data.num_blacks.length ; i++){
+					var container = document.getElementById("container");
+					var row = container.insertRow(-1);
+					for (var j = 0; j < data.sequence[i].length; j++) {
+						var col = row.insertCell(-1);
+						col.innerHTML = data.sequence[i][j];
+					}
+					
+					var black = row.insertCell(-1);
+					black.innerHTML = data.num_blacks[i];
+					
+					var white = row.insertCell(-1);
+					white.innerHTML = data.num_whites[i];
 				}
 			})		
 		})
+		
+		/*$(function() {
+			$.getJSON('/check', 
+		})*/
 	</script>
+		
+	</body>
 </html>

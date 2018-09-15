@@ -1,6 +1,5 @@
 function initialize() {
 	container = document.getElementById("container");
-	addRow();
 }
 
 function addRow() {
