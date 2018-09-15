@@ -86,13 +86,13 @@ def is_solved(position, solvedColor):
 				guess.num_whites -= 1
 				guess.sequence[position] = c.NONE
 
-# def apply_rule1():
-#     for guess in guesses:
-#         if guess.num_blacks == 0:
-#             for color in guess.sequence:
-#                 for possibility in possibilities:
-#                     if color in possibility:
-#                         possibility[possibility.index(color)] = c.NONE
+def apply_rule1():
+     for guess in guesses:
+         if guess.num_blacks == 0:
+             for color in guess.sequence:
+                 for possibility in possibilities:
+                     if color in possibility:
+                         possibility[possibility.index(color)] = c.NONE
 
 
 # def print_possibilities():
@@ -114,7 +114,12 @@ def main():
         else:
             guess_branch():
     #for g in code    
-        
+
+def all_possible_solutions():
+    solutions = [] #Array of guesses
+
+def is_soln(sequence):
+
     
         
 if __name__ == '__main__':

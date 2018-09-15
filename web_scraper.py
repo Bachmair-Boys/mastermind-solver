@@ -56,3 +56,6 @@ for line in attempts:
 guesses = []
 for i in range(len(guesses_sequence)):
 	guesses.append(Guess(guesses_sequence, guesses_black, guesses_white))
+
+def get_guesses():
+	return guesses

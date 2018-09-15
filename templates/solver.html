@@ -1,0 +1,34 @@
+<!DOCTYPE HTML >
+<!-- Bachmair Boys -->
+<html>
+	<head>
+		<title>Mastermind Solver</title>
+		<style></style>
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+		<script src="{{url_for('static', filename='js/script.js')}}"></script>
+	</head>
+	
+	<body onload = "initialize()">
+		<div id = "wrapper">
+			<h1>Custom Mastermind Puzzle Solver</h1>
+			<p>[insert description here]</p>
+			<br />
+			<table id = "container">
+				<tr>
+					<th>Position 1</th>
+					<th>Position 2</th>
+					<th>Position 3</th>
+					<th>Position 4</th>
+					<th>Black Pegs</th>
+					<th>White Pegs</th>
+				</tr>
+			</table>
+			<br>
+			<button onclick="addRow()">Add row</button>
+			<br /><br />
+			<button>Solve</button>
+			<br /><br />
+			<a href="{{ url_for('index') }}">Return to main page</a> 
+		</div>
+	</body>
+</html>

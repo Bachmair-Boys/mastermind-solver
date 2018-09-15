@@ -1,0 +1,41 @@
+<!DOCTYPE HTML >
+<!-- Bachmair Boys -->
+<html>
+	<head>
+		<title>Mastermind Solver</title>
+		<style></style>
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+		<script src="{{url_for('static', filename='js/script.js')}}"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	
+	<body onload = "initialize()">
+		<div id = "wrapper">
+			<h1>Solution to Tucker's Weekly Puzzle</h1>
+			<p>[insert description here]</p>
+			<br />
+			<table id = "container">
+				<tr>
+					<th>Position 1</th>
+					<th>Position 2</th>
+					<th>Position 3</th>
+					<th>Position 4</th>
+					<th>Black Pegs</th>
+					<th>White Pegs</th>
+				</tr>
+			</table>
+			<a href="{{ url_for('index') }}">Return to main page</a> 
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		$(function(){
+			$.getJSON($SCRIPT_ROOT + '/get_guesses', (data) => {
+				for(int i = 0; i < data.num_blacks.length ; i++){
+					row = $('<tr></tr>');
+					entry1 = $('<td>')
+				}
+			})		
+		})
+	</script>
+</html>
