@@ -11,7 +11,34 @@ explanations = []
 colors = [c.Y,c.G,c.R,c.Bk,c.Bu,c.W]
 possibilities = [colors] * 4
 
+def is_solved(position, solvedColor):
+	for guess in guesses:
+		colorCounter = 0
+		for color in guess.sequence:
+			if color == solvedColor:
+				colorCounter += 1
+		
+		if colorCounter == 1:
+			bool = False
+			if guess.sequence.index(solvedColor) == position:
+				guess.num_blacks -= 1
+				bool = True
+				guess.sequence[position] = c.NONE
+			if bool == False 
+				guess.num_whites -= 1
+				guess.sequence[position] = c.NONE
+	
+					
+				
+				
+					
 
+		
+				
+			
+		
+		
+	
 def apply_rule1():
     for guess in guesses:
         if guess.num_blacks == 0:
